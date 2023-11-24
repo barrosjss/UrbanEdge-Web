@@ -1,9 +1,29 @@
+:root {
+  --font-family: "Open Sans", sans-serif;
+  --color-gray: #5d5d5d;
+  --color-red: #fe0000;
+  --color-white: #fff;
+  --border-radius: 20px;
+  --margin-15: 15px;
+  --margin-20: 20px;
+  --margin-30: 30px;
+  --padding-20: 20px;
+  --font-size-20: 20px;
+  --font-size-32: 32px;
+  --font-size-44: 44px;
+  --font-size-200: 200px;
+  --max-width-750: 750px;
+  --max-width-970: 970px;
+  --max-width-1170: 1170px;
+}
+
+/* Global Rules */
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--font-family);
 }
 
 a {
@@ -17,9 +37,16 @@ ul {
   margin: 0;
 }
 
+h2 {
+  color: var(--color-gray);
+  font-size: var(--font-size-32);
+  margin-bottom: var(--margin-20);
+  text-align: center;
+}
+
 .container {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: var(--margin-15);
+  padding-right: var(--margin-15);
   margin-left: auto;
   margin-right: auto;
 }
@@ -27,25 +54,23 @@ ul {
 /* Small */
 @media (min-width: 768px) {
   .container {
-    width: 750px;
+    width: var(--max-width-750);
   }
 }
 
 /* Medium */
 @media (min-width: 992px) {
   .container {
-    width: 970px;
+    width: var(--max-width-970);
   }
 }
 
 /* Large */
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: var(--max-width-1170);
   }
 }
-
-/* End Global Rules */
 
 /* Start Landing Page */
 .landing-page header {
@@ -74,16 +99,16 @@ ul {
 }
 
 .landing-page header .logo {
-  color: #5d5d5d;
+  color: var(--color-gray);
   font-style: italic;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: var(--font-size-20);
 }
 
 @media (max-width: 767px) {
   .landing-page header .logo {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: var(--font-size-20);
+    margin-bottom: var(--font-size-20);
   }
 }
 
@@ -101,7 +126,7 @@ ul {
 
 .landing-page header .links li {
   margin-left: 30px;
-  color: #5d5d5d;
+  color: var(--color-gray);
   cursor: pointer;
   transition: 0.3s;
 }
@@ -115,12 +140,12 @@ ul {
 .landing-page header .links li:last-child {
   border-radius: 20px;
   padding: 10px 20px;
-  color: #fff;
-  background-color: #fe0000;
+  color: var(--color-white);
+  background-color: var(--color-red);
 }
 
 .landing-page header .links li:not(:last-child):hover {
-  color: #fe0000;
+  color: var(--color-red);
 }
 
 .landing-page .content .container {
@@ -148,7 +173,7 @@ ul {
 }
 
 .landing-page .content .info h1 {
-  color: #5d5d5d;
+  color: var(--color-gray);
   font-size: 44px;
 }
 
@@ -156,7 +181,7 @@ ul {
   margin: 0;
   line-height: 1.6;
   font-size: 15px;
-  color: #5d5d5d;
+  color: var(--color-gray);
 }
 
 .landing-page .content .info button {
@@ -165,8 +190,8 @@ ul {
   padding: 12px 30px;
   margin-top: 30px;
   cursor: pointer;
-  color: #fff;
-  background-color: #fe0000;
+  color: var(--color-white);
+  background-color: var(--color-red);
 }
 
 .landing-page .content .image img {
@@ -184,12 +209,6 @@ ul {
   text-align: center;
 }
 
-.about-us h2 {
-  color: #5d5d5d;
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
 .about-us p {
   color: #666;
   font-size: 18px;
@@ -201,11 +220,11 @@ ul {
 }
 
 .product-card {
-  background-color: #fff;
+  background-color: var(--color-white);
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  padding: 20px;
+  margin-bottom: var(--margin-20);
+  padding: var(--margin-20);
   width: 300px;
 }
 
@@ -215,13 +234,13 @@ ul {
 }
 
 .product-card h2 {
-  color: #5d5d5d;
-  font-size: 20px;
-  margin-top: 20px;
+  color: var(--color-gray);
+  font-size: var(--font-size-20);
+  margin-top: var(--margin-20);
 }
 
 .product-card p {
-  color: #666;
+  color: var(--color-gray);
   font-size: 18px;
 }
 
