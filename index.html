@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UrbanEdge</title>
     <link rel="stylesheet" href="style.css" />
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker.register("./scripts/service-worker.js");
+        });
+      }
+    </script>
   </head>
 
   <body class="landing-page">
@@ -59,24 +66,36 @@
         <h2>Productos</h2>
         <div class="product-container">
           <div class="product-card">
-            <img src="./img/productos/camisa.png" loading="lazy" alt="camisa" />
+            <img
+              data-src="./img/productos/camisa.png"
+              src="./img/placeholder.png"
+              alt="camisa"
+            />
             <h3>Camisas</h3>
             <p>$80.0000</p>
           </div>
           <div class="product-card">
-            <img src="./img/productos/taza.png" loading="lazy" alt="taza" />
+            <img
+              data-src="./img/productos/taza.png"
+              src="./img/placeholder.png"
+              alt="taza"
+            />
             <h3>Tazas</h3>
             <p>$55.0000</p>
           </div>
           <div class="product-card">
-            <img src="./img/productos/pins.png" loading="lazy" alt="pin" />
+            <img
+              data-src="./img/productos/pins.png"
+              src="./img/placeholder.png"
+              alt="pin"
+            />
             <h3>Pines</h3>
             <p>$46.0000</p>
           </div>
           <div class="product-card">
             <img
-              src="./img/productos/agendas.png"
-              loading="lazy"
+              data-src="./img/productos/agendas.png"
+              src="./img/placeholder.png"
               alt="agenda"
             />
             <h3>Agendas</h3>
@@ -98,5 +117,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./scripts/load.js"></script>
   </body>
 </html>
